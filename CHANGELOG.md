@@ -85,3 +85,14 @@ and this project adheres to [Semantic Versioning].
 
 - Connection to the device is postponed now. Previously some out of range device might prevents HA from fully booting.
 - Improved connection stability.
+
+## [0.2.0] - 2024-04-16
+
+### Added
+
+- Added new product_id for Fingerbot Plus, thanks to @Snuffy2 
+- Added support for 'Smartlife Plant Sensor SG01', thanks to @markusg1234.
+
+### Changed
+
+- Updated to @rpimeekle fork
