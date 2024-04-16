@@ -17,10 +17,9 @@ from homeassistant.const import (
     CONCENTRATION_PARTS_PER_MILLION,
     PERCENTAGE,
     SIGNAL_STRENGTH_DECIBELS_MILLIWATT,
-    TEMP_CELSIUS,
-    VOLUME_MILLILITERS,
     UnitOfTemperature,
-    UnitOfTime
+    UnitOfTime,
+    UnitOfVolume,
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity import EntityCategory
@@ -221,6 +220,18 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
             ),
         },
     ),
+    "kg": TuyaBLECategorySensorMapping(
+        products={
+            **dict.fromkeys(
+                [
+                    "mknd4lci"
+                ],  # Fingerbot Plus
+                [
+                    TuyaBLEBatteryMapping(dp_id=105),
+                ],
+            ),
+        },
+    ),
     "wsdcg": TuyaBLECategorySensorMapping(
         products={
             "ojzlzzsw": [  # Soil moisture sensor
@@ -327,7 +338,7 @@ mapping: dict[str, TuyaBLECategorySensorMapping] = {
                     description=SensorEntityDescription(
                         key="water_intake",
                         device_class=SensorDeviceClass.WATER,
-                        native_unit_of_measurement=VOLUME_MILLILITERS,
+                        native_unit_of_measurement=UnitOfVolume.MILLILITERS,
                         state_class=SensorStateClass.MEASUREMENT,
                     ),
                 ),
