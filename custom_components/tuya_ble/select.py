@@ -51,7 +51,7 @@ class TuyaBLEFingerbotModeMapping(TuyaBLESelectMapping):
             entity_category=EntityCategory.CONFIG,
             options=
                 [
-                    FINGERBOT_MODE_PUSH, 
+                    FINGERBOT_MODE_PUSH,
                     FINGERBOT_MODE_SWITCH,
                     FINGERBOT_MODE_PROGRAM,
                 ],
@@ -107,7 +107,10 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
     "szjqr": TuyaBLECategorySelectMapping(
         products={
             **dict.fromkeys(
-                ["3yqdo5yt", "xhf790if"],  # CubeTouch 1s and II
+                [
+                    "3yqdo5yt",
+                    "xhf790if"
+                ],  # CubeTouch 1s and II
                 [
                     TuyaBLEFingerbotModeMapping(dp_id=2),
                 ],
@@ -116,7 +119,7 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                 [
                     "blliqpsj",
                     "ndvkgsrm",
-                    "yiihr7zh", 
+                    "yiihr7zh",
                     "neq16kgd"
                 ],  # Fingerbot Plus
                 [
@@ -124,11 +127,29 @@ mapping: dict[str, TuyaBLECategorySelectMapping] = {
                 ],
             ),
             **dict.fromkeys(
-                ["ltak7e1p", "y6kttvd6", "yrnk7mnn",
-                    "nvr2rocq", "bnt7wajf", "rvdceqjh",
-                    "5xhbk964"],  # Fingerbot
+                [
+                    "ltak7e1p",
+                    "y6kttvd6",
+                    "yrnk7mnn",
+                    "nvr2rocq",
+                    "bnt7wajf",
+                    "rvdceqjh",
+                    "5xhbk964"
+                ],  # Fingerbot
                 [
                     TuyaBLEFingerbotModeMapping(dp_id=8),
+                ],
+            ),
+        },
+    ),
+    "kg": TuyaBLECategorySelectMapping(
+        products={
+            **dict.fromkeys(
+                [
+                    "mknd4lci"
+                ],  # Fingerbot Plus
+                [
+                    TuyaBLEFingerbotModeMapping(dp_id=101),
                 ],
             ),
         },
